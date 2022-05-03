@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="img\favicon-32x32.png">
+    <!-- Favicon source - https://www.flaticon.com/free-icons/portfolio -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  </head>
+
+  <body>
+    <header class="page-header">
+        <!--Update to better logo-->
+        <img src="img/temp_logo.png" alt="Temp Logo" class="page-header__item">
+        <!-- Menu Bar -->
+        <nav class="page-header__item">
+          <ul role="menubar" class="navigation-list">
+            <li role="presentation">
+              <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+            </li>
+            <li role="presentation">
+              <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+            </li>
+            <li>
+              <a href="work.html" role="menuitem" class="navigation-list__item">My Work</a>
+            </li>
+            <li role="presentation">
+              <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+      <h1>Contact</h1>
+      <!-- Call to Action -->
+      <p>
+        <a href="mailto:kynanpr@gmail.com">Email Me</a> or use the contact form below
+      </p>
+      <form action="" method="post" id="contact-form">
+        <label class="standard-label" for="contact-email">
+          Your Email:*
+        </label>
+        <input type="email" id="contact-email" required>
+
+        <label class="standard-label" for="contact-tel">
+          Telephone:
+        </label>
+        <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel">
+
+        <label class="standard-label" for="contact-msg">
+          Message:*
+          Max 240 Characters
+        </label>
+        <textarea maxlength="240" id="contact-msg" required></textarea>
+
+        <input type="Submit" value="Send Message">
+      </form>
+      <h2>Contact Details</h2>
+      <div>
+        CareerFoundry GmbH<br>
+        Köpenicker Str. 126 <br>
+        10179 Berlin<br>
+        Deutschland<br>
+        <br>
+        Tel - <a href="tel:+44 7982 030103">+44 7982 430103</a><br>
+        Skype - <a href="skype:hello.careerfoundry">hello.careerfoundry</a><br>
+        Email - <a href="mailto:kynanpr">office@careerfoundry.com</a>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <p>
+        Linky Links
+      </p>
+      <div class="social-media">
+        <!-- Add links -->
+        <a href="#">
+          <img src="img/github_icon.svg" alt="Github">
+        </a>
+        <a href="https://twitter.com/careerfoundry">
+          <img src="img/twitter_icon.svg" alt="Twitter" height="32px">
+        </a>
+        <a href="https://www.linkedin.com/in/kynan-parker-roth-980b64165/">
+          <img src="img/linkedin_icon.svg" alt="LinkedIn">
+        </a>
+      </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+  </body>
+</html>
