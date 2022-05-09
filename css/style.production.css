@@ -135,10 +135,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .page-footer {
-  text-align: center;
-  margin-top: var(--margin__standard);
-  border-top: var(--padding__thin);
-  padding-top: var(--padding__standard);
+  bottom: 0;
+  width: 100%;
+  position: fixed;
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,6 +146,10 @@ button:hover, button:focus, .button:hover, .button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
+  margin-top: var(--margin__standard);
+  border-top: var(--padding__thin);
+  padding-top: var(--padding__standard);
 }
 
 .page-header {

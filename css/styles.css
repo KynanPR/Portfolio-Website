@@ -123,13 +123,16 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .page-footer {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  clear: both;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin-top: var(--margin__standard);
   border-top: var(--padding__thin);
   padding-top: var(--padding__standard);
-  clear: both;
-  display: flex;
-  flex-direction: column;
 }
 
 .page-header {
