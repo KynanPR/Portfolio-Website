@@ -133,6 +133,10 @@ button:hover, button:focus, .button:hover, .button:focus {
   padding-top: var(--padding__standard);
 }
 
+.social-media a {
+  text-decoration: none;
+}
+
 .page-header {
   display: flex;
   width: 100%;
