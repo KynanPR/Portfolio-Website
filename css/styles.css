@@ -135,6 +135,10 @@ button:focus,
   text-decoration: none;
 }
 
+#social-media__twitter-icon {
+  height: 32px;
+}
+
 .page-header {
   display: flex;
   width: 100%;
