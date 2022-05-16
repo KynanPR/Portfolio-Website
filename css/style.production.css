@@ -30,7 +30,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -39,6 +39,11 @@ body {
   font-weight: var(--font-weight__normal);
   font-size: var(--font-size__standard);
   line-height: 1.6;
+}
+
+main {
+  margin-left: var(--margin__standard);
+  margin-right: var(--margin__standard);
 }
 
 h1 {
@@ -85,8 +90,8 @@ button,
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
@@ -139,8 +144,8 @@ button:focus,
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   text-decoration: none;
   margin-top: var(--margin__standard);
@@ -150,6 +155,10 @@ button:focus,
 
 .social-media a {
   text-decoration: none;
+}
+
+#social-media__twitter-icon {
+  width: 32px;
 }
 
 .page-header {
@@ -163,20 +172,20 @@ button:focus,
 
 .page-header__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
 .page-header img {
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 /* Grid Fallback */
@@ -257,7 +266,7 @@ button:focus,
   0% {
     opacity: 0;
     -webkit-transform: translateX(-100%) rotate(-120deg);
-    transform: translateX(-100%) rotate(-120deg);
+            transform: translateX(-100%) rotate(-120deg);
   }
 
   50% {
@@ -267,7 +276,7 @@ button:focus,
   100% {
     opacity: 1;
     -webkit-transform: translateX(0) rotate(0deg);
-    transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
   }
 }
 
@@ -275,7 +284,7 @@ button:focus,
   0% {
     opacity: 0;
     -webkit-transform: translateX(-100%) rotate(-120deg);
-    transform: translateX(-100%) rotate(-120deg);
+            transform: translateX(-100%) rotate(-120deg);
   }
 
   50% {
@@ -285,50 +294,52 @@ button:focus,
   100% {
     opacity: 1;
     -webkit-transform: translateX(0) rotate(0deg);
-    transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
   }
 }
 
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
     /* transform: scale(1); */
   }
 
   to {
     -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 
 @keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
     /* transform: scale(1); */
   }
 
   to {
     -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 
 #sword-lock {
+  width: 230px;
+  height: 230px;
   -webkit-transform-origin: 51.24% 53.04%;
-  -ms-transform-origin: 51.24% 53.04%;
-  transform-origin: 51.24% 53.04%;
+      -ms-transform-origin: 51.24% 53.04%;
+          transform-origin: 51.24% 53.04%;
   -webkit-animation-name: roll-on, spin;
-  animation-name: roll-on, spin;
+          animation-name: roll-on, spin;
   -webkit-animation-duration: 1s, 1.5s;
-  animation-duration: 1s, 1.5s;
+          animation-duration: 1s, 1.5s;
   -webkit-animation-iteration-count: 1, 1;
-  animation-iteration-count: 1, 1;
+          animation-iteration-count: 1, 1;
   -webkit-animation-direction: normal, normal;
-  animation-direction: normal, normal;
+          animation-direction: normal, normal;
   -webkit-animation-delay: 0s, 1.5s;
-  animation-delay: 0s, 1.5s;
+          animation-delay: 0s, 1.5s;
   -webkit-animation-timing-function: ease-out, ease;
-  animation-timing-function: ease-out, ease;
+          animation-timing-function: ease-out, ease;
 }
