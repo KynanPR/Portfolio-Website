@@ -33,6 +33,11 @@ body {
   line-height: 1.6;
 }
 
+main {
+  margin-left: var(--margin__standard);
+  margin-right: var(--margin__standard);
+}
+
 h1 {
   font-size: 30px;
   font-weight: var(--font-weight__thicc);
