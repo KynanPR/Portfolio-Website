@@ -254,6 +254,8 @@ button:focus,
 }
 
 #sword-lock {
+  width: 230px;
+  height: 230px;
   transform-origin: 51.24% 53.04%;
   animation-name: roll-on, spin;
   animation-duration: 1s, 1.5s;
