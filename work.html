@@ -1,108 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Kynan PR Portfolio</title>
-    <link rel="shortcut icon" href="img\favicon-32x32.png">
-    <!-- Favicon source - https://www.flaticon.com/free-icons/portfolio -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700" rel="stylesheet">
-    <!-- Production Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
-    <!-- Testing Stylesheet -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="page-header">
-        <!--Update to better logo-->
-        <img src="img/temp_logo.png" alt="Temp Logo" class="page-header__item">
-        <!-- Menu Bar -->
-        <nav class="page-header__item">
-          <ul role="menubar" class="navigation-list">
-            <li role="presentation">
-              <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-            </li>
-            <li role="presentation">
-              <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
-            </li>
-            <li>
-              <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">My Work</a>
-            </li>
-            <li role="presentation">
-              <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-            </li>
-          </ul>
-        </nav>
-    </header>
-    <main>
-      <section>
-        <h1>My Work</h1>
-        <div class="project-examples">
-          <div class="project-examples__item" id="project-examples__item--first">
-            <h2>Movie Api</h2>
-            <p>
-              A REST api built as part of my Career Foundry course.<br>Built using Node, Express, Mongoose, MongoDB.<br>Note: Information obtained from the api should not be relied on as factual 😁
-            </p>
-            <a href="https://github.com/KynanPR/movie_api">Check it out on GitHub</a>
-          </div>
-          <div class="project-examples__item">
-            <h2>Nonogram</h2>
-            <p>
-              A personal project where I am attemping to create my own version of the fad Nonogram game I got a little obsesse with.<br>Built using Python
-            </p>
-            <a href="https://github.com/KynanPR/Nonogram">Check it out on GitHub</a>
-          </div>
-          <div class="project-examples__item">
-            <h2>Portfolio Website</h2>
-            <p>
-              For the less observant I have a portfolio website...<br>Created initally as part of my Career Foundry course, I use it to show off my work
-            </p>
-            <a href="https://github.com/KynanPR/My-Portfolio-Website">Check it out (again) on GitHub</a>
-          </div>
-          <div class="project-examples__item">
-            <h2>Pokemon App</h2>
-            <p>
-              A simple app that uses the PokeAPI to show information about Pokemon
-            </p>
-            <a href="https://github.com/KynanPR/Pokemon-App">Check it out on GitHub</a>
-          </div>
-          <div class="project-examples__item">
-            <h2>ToDo App</h2>
-            <p>
-              A basic ToDo web app
-            </p>
-            <a href="https://github.com/KynanPR/ToDo-app">Check it out on GitHub</a>
-          </div>
-          <!-- <div class="project-examples__item">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Kynan PR Portfolio</title>
+		<link rel="shortcut icon" href="img\favicon-32x32.png" />
+		<!-- Favicon source - https://www.flaticon.com/free-icons/portfolio -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+			integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+			crossorigin="anonymous"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700" rel="stylesheet" />
+		<!-- Production Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.production.css" />
+		<!-- Testing Stylesheet -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="page-header">
+			<!--Update to better logo-->
+			<img src="img/temp_logo.png" alt="Temp Logo" class="page-header__item" />
+			<!-- Menu Bar -->
+			<nav class="page-header__item">
+				<ul role="menubar" class="navigation-list">
+					<li role="presentation">
+						<a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+					</li>
+					<li role="presentation">
+						<a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+					</li>
+					<li>
+						<a
+							href="work.html"
+							role="menuitem"
+							class="navigation-list__item navigation-list__item--active"
+							>My Work</a
+						>
+					</li>
+					<li role="presentation">
+						<a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<h1>My Work</h1>
+				<div class="project-examples">
+					<div class="project-examples__item" id="project-examples__item--first">
+						<h2>Blackbird Counselling Website</h2>
+						<p>
+							A website I was commisioned to make by a psychotherapist for their newly
+							created practice.<br />
+							Designed to reflect the personality and style of the therapist to engage and
+							bring in new clients.
+						</p>
+						<a href="https://blackbirdcounselling.co.uk/">Website here</a>
+						<a href="https://github.com/KynanPR/blackbird">Code on GitHub</a>
+					</div>
+					<div class="project-examples__item">
+						<h2>Fool's Gambit Website</h2>
+						<p>A handbuilt website for one of my dance teams Fool's Gambit Morris</p>
+						<a href="https://foolsgambitmorris.co.uk/">See the website here</a>
+						<a href="https://github.com/KynanPR/Fools-Website">and the code on GitHub</a>
+					</div>
+					<div class="project-examples__item">
+						<h2>Portfolio Website</h2>
+						<p>
+							For the less observant I have a portfolio website...<br />Created initally as
+							part of my Career Foundry course, I use it to show off my work
+						</p>
+						<a href="https://github.com/KynanPR/My-Portfolio-Website"
+							>Check it out (again) on GitHub</a
+						>
+					</div>
+					<div class="project-examples__item">
+						<h2>Movie Api</h2>
+						<p>
+							A REST api built as part of my Career Foundry course.<br />Built using Node,
+							Express, Mongoose, MongoDB.<br />Note: Information obtained from the api should
+							not be relied on as factual 😁
+						</p>
+						<a href="https://github.com/KynanPR/movie_api">Check it out on GitHub</a>
+					</div>
+					<div class="project-examples__item">
+						<h2>Pokemon App</h2>
+						<p>A simple app that uses the PokeAPI to show information about Pokemon</p>
+						<a href="https://github.com/KynanPR/Pokemon-App">Check it out on GitHub</a>
+					</div>
+
+					<!-- <div class="project-examples__item">
             <h2>Placeholder Project Title 6</h2>
             <p>
               Placeholder project description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ante non pulvinar accumsan. Nullam bibendum dui quis elementum auctor.
             </p>
             <a href="#">Check it out on GitHub</a>
           </div> -->
-        </div>
-      </section>
-
-    </main>
-    <!-- Footer -->
-    <footer class="page-footer">
-        <p>
-          Linky Links
-        </p>
-        <div class="social-media">
-          <!-- Add links -->
-          <a href="https://github.com/KynanPR">
-            <img src="img/github_icon.svg" alt="Github">
-          </a>
-          <a href="https://twitter.com/careerfoundry">
-            <img src="img/twitter_icon.svg" alt="Twitter" id="social-media__twitter-icon">
-          </a>
-          <a href="https://www.linkedin.com/in/kynan-parker-roth-980b64165/">
-            <img src="img/linkedin_icon.svg" alt="LinkedIn">
-          </a>
-        </div>
-    </footer>
-  </body>
+				</div>
+			</section>
+		</main>
+		<!-- Footer -->
+		<footer class="page-footer">
+			<p>Linky Links</p>
+			<div class="social-media">
+				<!-- Add links -->
+				<a href="https://github.com/KynanPR">
+					<img src="img/github_icon.svg" alt="Github" />
+				</a>
+				<a href="https://twitter.com/careerfoundry">
+					<img src="img/twitter_icon.svg" alt="Twitter" id="social-media__twitter-icon" />
+				</a>
+				<a href="https://www.linkedin.com/in/kynan-parker-roth-980b64165/">
+					<img src="img/linkedin_icon.svg" alt="LinkedIn" />
+				</a>
+			</div>
+		</footer>
+	</body>
 </html>
