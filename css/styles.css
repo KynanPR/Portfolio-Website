@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --color-primary: #9200de;
   --color-secondary: #8b5cf6;
@@ -9,17 +13,77 @@
   --color-border: #a4a900;
   --color-success: #22c55e;
   --color-error: #ef4444;
+  background-color: var(--color-background);
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
 }
 
 .dark {
   --color-primary: #9200de;
   --color-secondary: #a62ba7;
   --color-accent: #890640;
-  --color-background: #282a2f;
-  --color-surface: #293342;
-  --color-text: #ffffff;
+  --color-background: #383d47;
+  --color-surface: #243044;
+  --color-text: #e4dcdc;
   --color-textMuted: #c6ced9;
   --color-border: #a4a900;
   --color-success: #4ade80;
   --color-error: #f87171;
+}
+
+main {
+  --color-primary: #9200de;
+  --color-secondary: #a62ba7;
+  --color-accent: #890640;
+  --color-background: #383d47;
+  --color-surface: #243044;
+  --color-text: #e4dcdc;
+  --color-textMuted: #c6ced9;
+  --color-border: #a4a900;
+  --color-success: #4ade80;
+  --color-error: #f87171;
+  background-color: var(--color-background);
+  padding: 0 5vw;
+}
+
+.card {
+  min-height: 30vh;
+  background-color: var(--color-surface);
+  border: 0.1rem solid var(--color-border);
+  border-radius: 1rem;
+  padding: none;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  color: var(--color-text);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+.card .title {
+  flex: 1 0 15%;
+  order: 1;
+  padding: 0.75rem 2rem 0.25rem 2rem;
+}
+.card .title border- h2 {
+  margin: 0;
+  text-align: center;
+}
+.card .video {
+  order: 3;
+  flex: 3 1 50%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card .video iframe {
+  margin: none;
+}
+.card .details {
+  flex: 2 2 35%;
+  order: 2;
 }/*# sourceMappingURL=styles.css.map */
