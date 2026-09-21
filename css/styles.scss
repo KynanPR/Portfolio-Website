@@ -1,0 +1,41 @@
+// SCSS Theme Variables
+$theme-light: (
+  "primary": #9200de,
+  "secondary": #8b5cf6,
+  "accent": #890640,
+  "background": #ffffff,
+  "surface": #f8fafc,
+  "text": #1e293b,
+  "textMuted": #64748b,
+  "border": #a4a900,
+  "success": #22c55e,
+  "error": #ef4444,
+);
+
+$theme-dark: (
+  "primary": #9200de,
+  "secondary": #a62ba7,
+  "accent": #890640,
+  "background": #282a2f,
+  "surface": #293342,
+  "text": #ffffff,
+  "textMuted": #c6ced9,
+  "border": #a4a900,
+  "success": #4ade80,
+  "error": #f87171,
+);
+
+// Theme Mixin
+@mixin theme-colors($theme) {
+  @each $name, $color in $theme {
+    --color-#{$name}: #{$color};
+  }
+}
+
+:root {
+  @include theme-colors($theme-light);
+}
+
+.dark {
+  @include theme-colors($theme-dark);
+}
