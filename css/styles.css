@@ -22,11 +22,11 @@
   --color-primary: #9200de;
   --color-secondary: #a62ba7;
   --color-accent: #890640;
-  --color-background: #383d47;
-  --color-surface: #243044;
+  --color-background: #31332f;
+  --color-surface: #162b12;
   --color-text: #e4dcdc;
   --color-textMuted: #c6ced9;
-  --color-border: #a4a900;
+  --color-border: rgb(13.84, 86.5, 0);
   --color-success: #4ade80;
   --color-error: #f87171;
 }
@@ -35,11 +35,11 @@ main {
   --color-primary: #9200de;
   --color-secondary: #a62ba7;
   --color-accent: #890640;
-  --color-background: #383d47;
-  --color-surface: #243044;
+  --color-background: #31332f;
+  --color-surface: #162b12;
   --color-text: #e4dcdc;
   --color-textMuted: #c6ced9;
-  --color-border: #a4a900;
+  --color-border: rgb(13.84, 86.5, 0);
   --color-success: #4ade80;
   --color-error: #f87171;
   background-color: var(--color-background);

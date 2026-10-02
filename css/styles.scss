@@ -12,15 +12,18 @@ $theme-light: (
   "error": #ef4444,
 );
 
+$__dark_surface_colour: #162b12;
+
 $theme-dark: (
   "primary": #9200de,
   "secondary": #a62ba7,
   "accent": #890640,
-  "background": #383d47,
-  "surface": #243044,
+  'background': #31332f,
+  "surface": $__dark_surface_colour, //#10330a,
   "text": #e4dcdc,
   "textMuted": #c6ced9,
-  "border": #a4a900,
+  // "border": #a4a900,
+  "border": lighten(saturate($__dark_surface_colour, 80%), 5%),
   "success": #4ade80,
   "error": #f87171,
 );
