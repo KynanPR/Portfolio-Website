@@ -18,8 +18,9 @@ $theme-dark: (
   "primary": #9200de,
   "secondary": #a62ba7,
   "accent": #890640,
-  'background': #31332f,
-  "surface": $__dark_surface_colour, //#10330a,
+  "background": #31332f,
+  "surface": $__dark_surface_colour,
+  //#10330a,
   "text": #e4dcdc,
   "textMuted": #c6ced9,
   // "border": #a4a900,
@@ -41,7 +42,7 @@ $theme-dark: (
 
 :root {
   @include theme-colors($theme-light);
-  background-color: var(--color-#{background});
+  background-color: var(--color-#{"background"});
   font-size: 15px;
   font-family: "Lato", sans-serif;
 }
@@ -50,42 +51,69 @@ $theme-dark: (
   @include theme-colors($theme-dark);
 }
 
+header {
+  @include theme-colors($theme-dark);
+  background-color: var(--color-#{"background"});
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  overflow: hidden;
+}
+
 main {
   @include theme-colors($theme-dark);
   background-color: var(--color-#{"background"});
   padding: 0 5vw;
 }
 
+.pill {
+  background-color: var(--color-#{"accent"});
+  display: inline-flex;
+  padding: 0.25em 0.75em;
+  line-height: 1em;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 20% / 50%;
+
+  font-size: x-small;
+  font-weight: bold;
+}
+
 .card {
   min-height: 30vh;
+  height: fit-content;
   background-color: var(--color-#{"surface"});
   border: 0.1rem solid var(--color-#{"border"});
   border-radius: 1rem;
-  padding: none;
+  padding: 0 0 1rem 0;
   margin-top: 1.5rem;
   overflow: hidden;
   color: var(--color-#{"text"});
 
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: stretch;
-  gap: 0.5rem;
+  gap: none;
 
   .title {
-    flex: 1 0 15%;
-    order: 1;
-    padding: 0.75rem 2rem 0.25rem 2rem;
-    ::after {
-    }
-    border- h2 {
+    flex: 0 0 15%;
+    order: 2;
+    padding: 0.25rem 2rem 0.5rem 2rem;
+    h2 {
       margin: 0;
       text-align: center;
+
+      font-size: 1.5rem;
     }
   }
   .video {
-    order: 3;
-    flex: 3 1 50%;
+    order: 1;
+    flex: 3 1 70%;
     max-height: fit-content;
     height: fit-content;
     border-radius: 1rem;
@@ -95,7 +123,22 @@ main {
     }
   }
   .details {
-    flex: 2 2 35%;
-    order: 2;
+    flex: 0 0 15%;
+    order: 3;
+
+    color: var(--color-#{"textMuted"});
+
+    .pill-list {
+      margin: 0;
+      margin-block: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: start;
+      align-items: center;
+      gap: 0.5rem;
+      li {
+        @extend .pill;
+      }
+    }
   }
 }
