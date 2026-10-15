@@ -49,6 +49,8 @@ header {
   width: 100%;
   height: 10vh;
   overflow: hidden;
+  z-index: 5;
+  display: none;
 }
 
 main {
@@ -66,6 +68,19 @@ main {
   padding: 0 5vw;
 }
 
+.cards {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3rem;
+}
+@media screen and (min-width: 800px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 65vh repeat(auto-fit, 60vh);
+  }
+}
+
 .pill, .card .details .pill-list li {
   background-color: var(--color-accent);
   display: inline-flex;
@@ -76,6 +91,7 @@ main {
   align-items: center;
   height: 1.5rem;
   border-radius: 20%/50%;
+  gap: 0.2rem;
   font-size: x-small;
   font-weight: bold;
 }
@@ -88,14 +104,19 @@ main {
   border: 0.1rem solid var(--color-border);
   border-radius: 1rem;
   padding: 0 0 1rem 0;
-  margin-top: 1.5rem;
   overflow: hidden;
   color: var(--color-text);
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: stretch;
-  gap: none;
+  gap: 0.5rem;
+  order: 50;
+}
+@media screen and (min-width: 800px) {
+  .card {
+    height: 100%;
+  }
 }
 .card .title {
   flex: 0 0 15%;
@@ -109,19 +130,24 @@ main {
 }
 .card .video {
   order: 1;
-  flex: 3 1 70%;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  flex: 3 1 65%;
+  max-height: 60vh;
   border-radius: 1rem;
   overflow: hidden;
 }
-.card .video iframe {
-  margin: none;
+.card .video > iframe {
+  height: 100%;
+  margin: 0;
+}
+.card .oneLiner {
+  color: var(--color-textMuted);
+  flex: 1 1 10%;
+  order: 4;
+  padding: 0rem 1rem;
+  text-align: center;
 }
 .card .details {
-  flex: 0 0 15%;
+  flex: 0 0 10%;
   order: 3;
   color: var(--color-textMuted);
 }
@@ -133,4 +159,8 @@ main {
   justify-content: start;
   align-items: center;
   gap: 0.5rem;
+}
+.card .details .pill-list li img {
+  display: inline-block;
+  max-height: 90%;
 }/*# sourceMappingURL=styles.css.map */
