@@ -1,7 +1,7 @@
 // SCSS Theme Variables
 $theme-light: (
   "primary": #9200de,
-  "secondary": #8b5cf6,
+  "secondary": #6c38e5,
   "accent": #890640,
   "background": #ffffff,
   "surface": #f8fafc,
@@ -15,21 +15,17 @@ $theme-light: (
 $__dark_surface_colour: #162b12;
 
 $theme-dark: (
-  "primary": #9200de,
-  "secondary": #a62ba7,
+  "primary": #7b02bb,
+  "secondary": #7a127a,
   "accent": #890640,
   "background": #31332f,
   "surface": $__dark_surface_colour,
-  //#10330a,
   "text": #e4dcdc,
   "textMuted": #c6ced9,
-  // "border": #a4a900,
   "border": lighten(saturate($__dark_surface_colour, 80%), 5%),
   "success": #4ade80,
   "error": #f87171,
 );
-
-$large-breakpoint: 800px;
 
 // Theme Mixin
 @mixin theme-colors($theme) {
@@ -38,6 +34,12 @@ $large-breakpoint: 800px;
   }
 }
 
+// Styling Vars
+$large-breakpoint: 800px;
+$fontSizeNormal: 16px;
+$fontSizeSmall: 14px;
+$borderThin: 0.1rem solid var(--color-#{"border"});
+
 * {
   box-sizing: border-box;
 }
@@ -45,7 +47,7 @@ $large-breakpoint: 800px;
 :root {
   @include theme-colors($theme-light);
   background-color: var(--color-#{"background"});
-  font-size: 15px;
+  font-size: $fontSizeNormal;
   font-family: "Lato", sans-serif;
 }
 
@@ -85,7 +87,7 @@ main {
 }
 
 .pill {
-  background-color: var(--color-#{"accent"});
+  background-color: var(--color-#{"secondary"});
   display: inline-flex;
   padding: 0.25em 0.75em;
   line-height: 1em;
@@ -93,7 +95,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 1.5rem;
-  border-radius: 20% / 50%;
+  border-radius: 100vw; //perfect pill shape at any size without any JS
   gap: 0.2rem;
 
   font-size: x-small;
@@ -102,12 +104,12 @@ main {
 
 .card {
   min-height: 30vh;
+  max-height: 50vh;
   height: fit-content;
   background-color: var(--color-#{"surface"});
-  border: 0.1rem solid var(--color-#{"border"});
+  border: $borderThin;
   border-radius: 1rem;
   padding: 0 0 1rem 0;
-  // margin-top: 1.5rem;
   overflow: hidden;
   color: var(--color-#{"text"});
 
@@ -127,11 +129,29 @@ main {
     flex: 0 0 15%;
     order: 2;
     padding: 0.25rem 2rem 0.5rem 2rem;
-    h2 {
-      margin: 0;
-      text-align: center;
 
-      font-size: 1.5rem;
+    h2 {
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .pill-list {
+      margin: 0;
+      padding: 0;
+      margin-block: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-#{"textMuted"});
+      li {
+        @extend .pill;
+        img {
+          display: inline-block;
+          max-height: 90%;
+        }
+      }
     }
   }
   .video {
@@ -150,31 +170,56 @@ main {
   .oneLiner {
     color: var(--color-#{"textMuted"});
     flex: 1 1 10%;
-    order: 4;
-    padding: 0rem 1rem;
+    order: 3;
+    padding: 0rem 2rem;
     text-align: center;
+    font-size: larger;
+    font-style: italic;
   }
   .details {
     flex: 0 0 10%;
-    order: 3;
+    order: 4;
 
     color: var(--color-#{"textMuted"});
 
-    .pill-list {
-      margin: 0;
-      margin-block: 0;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: start;
-      align-items: center;
-      gap: 0.5rem;
+    ul {
+      list-style-type: none;
+      padding: 0 1rem;
+      font-size: $fontSizeSmall;
+      line-height: 1.2em;
       li {
-        @extend .pill;
-        img {
-          display: inline-block;
-          max-height: 90%;
+        text-align: justify;
+        &::after {
+          content: "";
+          display: block;
+          position: relative;
+          top: 0;
+          $borderWidth: 70%;
+          width: $borderWidth;
+          left: calc((100% - $borderWidth) / 2);
+          height: 0;
+          border-top: $borderThin;
+          border-color: var(--color-#{"accent"});
+          margin: 0.5rem 0;
+        }
+        &:last-of-type::after {
+          display: none;
         }
       }
     }
+  }
+  &::after {
+    content: url("/img/add_icon.svg");
+    border: $borderThin;
+    border-radius: 100%;
+    background-color: var(--color-#{"primary"});
+    // text-align: center;
+
+    $buttonWidth: 2rem;
+    width: $buttonWidth;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    bottom: calc($buttonWidth / 2);
+    left: calc(50% - $buttonWidth / 2);
   }
 }

@@ -4,7 +4,7 @@
 
 :root {
   --color-primary: #9200de;
-  --color-secondary: #8b5cf6;
+  --color-secondary: #6c38e5;
   --color-accent: #890640;
   --color-background: #ffffff;
   --color-surface: #f8fafc;
@@ -14,13 +14,13 @@
   --color-success: #22c55e;
   --color-error: #ef4444;
   background-color: var(--color-background);
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Lato", sans-serif;
 }
 
 .dark {
-  --color-primary: #9200de;
-  --color-secondary: #a62ba7;
+  --color-primary: #7b02bb;
+  --color-secondary: #7a127a;
   --color-accent: #890640;
   --color-background: #31332f;
   --color-surface: #162b12;
@@ -32,8 +32,8 @@
 }
 
 header {
-  --color-primary: #9200de;
-  --color-secondary: #a62ba7;
+  --color-primary: #7b02bb;
+  --color-secondary: #7a127a;
   --color-accent: #890640;
   --color-background: #31332f;
   --color-surface: #162b12;
@@ -54,8 +54,8 @@ header {
 }
 
 main {
-  --color-primary: #9200de;
-  --color-secondary: #a62ba7;
+  --color-primary: #7b02bb;
+  --color-secondary: #7a127a;
   --color-accent: #890640;
   --color-background: #31332f;
   --color-surface: #162b12;
@@ -81,8 +81,8 @@ main {
   }
 }
 
-.pill, .card .details .pill-list li {
-  background-color: var(--color-accent);
+.pill, .card .title .pill-list li {
+  background-color: var(--color-secondary);
   display: inline-flex;
   padding: 0.25em 0.75em;
   line-height: 1em;
@@ -90,7 +90,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 1.5rem;
-  border-radius: 20%/50%;
+  border-radius: 100vw;
   gap: 0.2rem;
   font-size: x-small;
   font-weight: bold;
@@ -98,6 +98,7 @@ main {
 
 .card {
   min-height: 30vh;
+  max-height: 50vh;
   height: -moz-fit-content;
   height: fit-content;
   background-color: var(--color-surface);
@@ -124,9 +125,24 @@ main {
   padding: 0.25rem 2rem 0.5rem 2rem;
 }
 .card .title h2 {
-  margin: 0;
+  margin: 0 0 0.5rem 0;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+.card .title .pill-list {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-textMuted);
+}
+.card .title .pill-list li img {
+  display: inline-block;
+  max-height: 90%;
 }
 .card .video {
   order: 1;
@@ -142,25 +158,49 @@ main {
 .card .oneLiner {
   color: var(--color-textMuted);
   flex: 1 1 10%;
-  order: 4;
-  padding: 0rem 1rem;
+  order: 3;
+  padding: 0rem 2rem;
   text-align: center;
+  font-size: larger;
+  font-style: italic;
 }
 .card .details {
   flex: 0 0 10%;
-  order: 3;
+  order: 4;
   color: var(--color-textMuted);
 }
-.card .details .pill-list {
-  margin: 0;
-  margin-block: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: start;
-  align-items: center;
-  gap: 0.5rem;
+.card .details ul {
+  list-style-type: none;
+  padding: 0 1rem;
+  font-size: 14px;
+  line-height: 1.2em;
 }
-.card .details .pill-list li img {
-  display: inline-block;
-  max-height: 90%;
+.card .details ul li {
+  text-align: justify;
+}
+.card .details ul li::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  width: 70%;
+  left: 15%;
+  height: 0;
+  border-top: 0.1rem solid var(--color-border);
+  border-color: var(--color-accent);
+  margin: 0.5rem 0;
+}
+.card .details ul li:last-of-type::after {
+  display: none;
+}
+.card::after {
+  content: url("/img/add_icon.svg");
+  border: 0.1rem solid var(--color-border);
+  border-radius: 100%;
+  background-color: var(--color-primary);
+  width: 2rem;
+  aspect-ratio: 1/1;
+  position: absolute;
+  bottom: 1rem;
+  left: calc(50% - 1rem);
 }/*# sourceMappingURL=styles.css.map */
