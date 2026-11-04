@@ -35,7 +35,8 @@ $theme-dark: (
 }
 
 // Styling Vars
-$large-breakpoint: 800px;
+$medium-breakpoint: 1000px;
+$large-breakpoint: 2000px;
 $fontSizeNormal: 16px;
 $fontSizeSmall: 14px;
 $borderThin: 0.1rem solid var(--color-#{"border"});
@@ -49,6 +50,9 @@ $borderThin: 0.1rem solid var(--color-#{"border"});
   background-color: var(--color-#{"background"});
   font-size: $fontSizeNormal;
   font-family: "Lato", sans-serif;
+  @media screen and (min-width: $large-breakpoint) {
+    font-size: calc($fontSizeNormal * 1.5);
+  }
 }
 
 .dark {
@@ -78,7 +82,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   gap: 3rem;
-  @media screen and (min-width: $large-breakpoint) {
+  @media screen and (min-width: $medium-breakpoint) {
     // flex-flow: row wrap;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -104,7 +108,7 @@ main {
 
 .card {
   min-height: 30vh;
-  max-height: 50vh;
+  max-height: 65vh;
   height: fit-content;
   background-color: var(--color-#{"surface"});
   border: $borderThin;
@@ -123,10 +127,12 @@ main {
 
   @media screen and (min-width: $large-breakpoint) {
     height: 100%;
+    min-height: 500px;
+    max-height: 1000px;
   }
 
   .title {
-    flex: 0 0 15%;
+    flex: 0 0 10%;
     order: 2;
     padding: 0.25rem 2rem 0.5rem 2rem;
 
@@ -156,12 +162,15 @@ main {
   }
   .video {
     order: 1;
-    flex: 3 1 65%;
+    flex: 3 0 50%;
     max-height: 60vh;
     // height: fit-content;
     // height: 6vh;
     border-radius: 1rem;
     overflow: hidden;
+    @media screen and (min-width: $large-breakpoint) {
+      padding: 0 !important;
+    }
     > iframe {
       height: 100%;
       margin: 0;
@@ -169,7 +178,7 @@ main {
   }
   .oneLiner {
     color: var(--color-#{"textMuted"});
-    flex: 1 1 10%;
+    flex: 1 0 15%;
     order: 3;
     padding: 0rem 2rem;
     text-align: center;
@@ -177,8 +186,9 @@ main {
     font-style: italic;
   }
   .details {
-    flex: 0 0 10%;
+    flex: 2 2 25%;
     order: 4;
+    overflow-y: scroll;
 
     color: var(--color-#{"textMuted"});
 
