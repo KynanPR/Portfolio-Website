@@ -35,10 +35,11 @@ $theme-dark: (
 }
 
 // Styling Vars
-$medium-breakpoint: 1000px;
-$large-breakpoint: 2000px;
+$mediumBreakpoint: 1000px;
+$largeBreakpoint: 2000px;
 $fontSizeNormal: 16px;
 $fontSizeSmall: 14px;
+$fontSizeLarge: 20px;
 $borderThin: 0.1rem solid var(--color-#{"border"});
 
 * {
@@ -50,7 +51,7 @@ $borderThin: 0.1rem solid var(--color-#{"border"});
   background-color: var(--color-#{"background"});
   font-size: $fontSizeNormal;
   font-family: "Lato", sans-serif;
-  @media screen and (min-width: $large-breakpoint) {
+  @media screen and (min-width: $largeBreakpoint) {
     font-size: calc($fontSizeNormal * 1.5);
   }
 }
@@ -66,26 +67,82 @@ body {
 
 header {
   @include theme-colors($theme-dark);
-  background-color: var(--color-#{"background"});
+  background-color: var(--color-#{"surface"});
   position: sticky;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 5vh;
+  height: 10vh;
   overflow: hidden;
   z-index: 5;
-  display: flex;
-  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 10vw 80vw 10vw;
+  grid-template-rows: 100%;
+  grid-template-areas: "name nav links";
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: $borderThin;
+  border-color: var(--color-#{"accent"});
+
+  .name {
+    grid-area: name;
+    font-size: 1.5rem;
+    color: var(--color-#{"accent"});
+    font-weight: bold;
+    margin: auto;
+  }
 
   nav {
+    grid-area: nav;
+    width: 100%;
+    padding: 0;
     ul {
       display: flex;
-      flex-flow: row nowrap;
-      gap: 0.5rem;
+      flex-flow: column wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100%;
+      gap: 0.2rem;
+      padding: 0.2rem;
+      margin: 0;
+
+      @media screen and (min-width: $mediumBreakpoint) {
+        flex-flow: row wrap;
+        padding: 0;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+      }
 
       li {
         list-style-type: none;
+        font-weight: bold;
+        // font-size: 1rem;
+        min-width: 50px;
+        a {
+          text-decoration: none;
+          color: var(--color-#{"primary"});
+        }
       }
+    }
+  }
+
+  .links {
+    grid-area: links;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    a {
+      width: 32px;
+    }
+    > img {
+      height: 100%;
+      width: 32px;
+      max-height: 100%;
+      max-width: 10%;
     }
   }
 }
@@ -105,7 +162,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   gap: 3rem;
-  @media screen and (min-width: $medium-breakpoint) {
+  @media screen and (min-width: $mediumBreakpoint) {
     // flex-flow: row wrap;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -148,7 +205,7 @@ main {
 
   order: 50; // Default order to put otherwise unspecified cards to the end
 
-  @media screen and (min-width: $large-breakpoint) {
+  @media screen and (min-width: $largeBreakpoint) {
     height: 100%;
     min-height: 500px;
     max-height: 1000px;
@@ -191,7 +248,7 @@ main {
     // height: 6vh;
     border-radius: 1rem;
     overflow: hidden;
-    @media screen and (min-width: $large-breakpoint) {
+    @media screen and (min-width: $largeBreakpoint) {
       padding: 0 !important;
     }
     > iframe {
