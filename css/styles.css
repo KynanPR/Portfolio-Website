@@ -278,7 +278,7 @@ main {
 .card .details ul {
   list-style-type: none;
   padding: 0 1rem;
-  font-size: 14px;
+  font-size: 0.8rem;
   line-height: 1.2em;
 }
 .card .details ul li {
