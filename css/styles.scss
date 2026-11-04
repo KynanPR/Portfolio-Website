@@ -208,18 +208,18 @@ main {
       }
     }
   }
-  &::after {
-    content: url("/img/add_icon.svg");
-    border: $borderThin;
-    border-radius: 100%;
-    background-color: var(--color-#{"primary"});
-    // text-align: center;
+  // &::after {
+  //   content: url("/img/add_icon.svg");
+  //   border: $borderThin;
+  //   border-radius: 100%;
+  //   background-color: var(--color-#{"primary"});
+  //   // text-align: center;
 
-    $buttonWidth: 2rem;
-    width: $buttonWidth;
-    aspect-ratio: 1 / 1;
-    position: absolute;
-    bottom: calc($buttonWidth / 2);
-    left: calc(50% - $buttonWidth / 2);
-  }
+  //   $buttonWidth: 2rem;
+  //   width: $buttonWidth;
+  //   aspect-ratio: 1 / 1;
+  //   position: absolute;
+  //   bottom: calc($buttonWidth / 2);
+  //   left: calc(50% - $buttonWidth / 2);
+  // }
 }

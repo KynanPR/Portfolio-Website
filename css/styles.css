@@ -192,15 +192,4 @@ main {
 }
 .card .details ul li:last-of-type::after {
   display: none;
-}
-.card::after {
-  content: url("/img/add_icon.svg");
-  border: 0.1rem solid var(--color-border);
-  border-radius: 100%;
-  background-color: var(--color-primary);
-  width: 2rem;
-  aspect-ratio: 1/1;
-  position: absolute;
-  bottom: 1rem;
-  left: calc(50% - 1rem);
 }/*# sourceMappingURL=styles.css.map */
