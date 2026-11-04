@@ -36,6 +36,20 @@
   --color-error: #f87171;
 }
 
+body {
+  --color-primary: #7b02bb;
+  --color-secondary: #7a127a;
+  --color-accent: #890640;
+  --color-background: #31332f;
+  --color-surface: #162b12;
+  --color-text: #e4dcdc;
+  --color-textMuted: #c6ced9;
+  --color-border: rgb(13.84, 86.5, 0);
+  --color-success: #4ade80;
+  --color-error: #f87171;
+  background-color: var(--color-background);
+}
+
 header {
   --color-primary: #7b02bb;
   --color-secondary: #7a127a;
@@ -51,11 +65,34 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 10vh;
+  width: 100vw;
+  height: 5vh;
   overflow: hidden;
   z-index: 5;
-  display: none;
+  display: flex;
+  padding: 0 2rem;
+}
+header nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+}
+header nav ul li {
+  list-style-type: none;
+}
+
+footer {
+  --color-primary: #7b02bb;
+  --color-secondary: #7a127a;
+  --color-accent: #890640;
+  --color-background: #31332f;
+  --color-surface: #162b12;
+  --color-text: #e4dcdc;
+  --color-textMuted: #c6ced9;
+  --color-border: rgb(13.84, 86.5, 0);
+  --color-success: #4ade80;
+  --color-error: #f87171;
+  background-color: var(--color-background);
 }
 
 main {
