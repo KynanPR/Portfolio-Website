@@ -3,16 +3,16 @@
 }
 
 :root {
-  --color-primary: #9200de;
-  --color-secondary: #6c38e5;
+  --color-primary: #7b02bb;
+  --color-secondary: #7a127a;
   --color-accent: #890640;
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
-  --color-text: #1e293b;
-  --color-textMuted: #64748b;
-  --color-border: #a4a900;
-  --color-success: #22c55e;
-  --color-error: #ef4444;
+  --color-background: #1a1a1f;
+  --color-surface: #211a48;
+  --color-text: #e4dcdc;
+  --color-textMuted: #c6ced9;
+  --color-border: rgb(18.7934782609, 0, 123.5);
+  --color-success: #4ade80;
+  --color-error: #f87171;
   background-color: var(--color-background);
   font-size: 16px;
   font-family: "Lato", sans-serif;

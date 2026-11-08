@@ -47,7 +47,7 @@ $borderThin: 0.1rem solid var(--color-#{"border"});
 }
 
 :root {
-  @include theme-colors($theme-light);
+  @include theme-colors($theme-dark);
   background-color: var(--color-#{"background"});
   font-size: $fontSizeNormal;
   font-family: "Lato", sans-serif;
