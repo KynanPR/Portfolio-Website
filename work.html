@@ -1,122 +1,250 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>Kynan PR Portfolio</title>
-		<link rel="shortcut icon" href="img\favicon-32x32.png" />
-		<!-- Favicon source - https://www.flaticon.com/free-icons/portfolio -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-			integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-			crossorigin="anonymous"
-		/>
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700" rel="stylesheet" />
-		<!-- Production Stylesheet -->
-		<link rel="stylesheet" type="text/css" href="css/style.production.css" />
-		<!-- Testing Stylesheet -->
-		<!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
-	</head>
-	<body>
-		<!-- Header -->
-		<header class="page-header">
-			<!--Update to better logo-->
-			<img src="img/temp_logo.png" alt="Temp Logo" class="page-header__item" />
-			<!-- Menu Bar -->
-			<nav class="page-header__item">
-				<ul role="menubar" class="navigation-list">
-					<li role="presentation">
-						<a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-					</li>
-					<li role="presentation">
-						<a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
-					</li>
-					<li>
-						<a
-							href="work.html"
-							role="menuitem"
-							class="navigation-list__item navigation-list__item--active"
-							>My Work</a
-						>
-					</li>
-					<li role="presentation">
-						<a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<section>
-				<h1>My Work</h1>
-				<div class="project-examples">
-					<div class="project-examples__item" id="project-examples__item--first">
-						<h2>Blackbird Counselling Website</h2>
-						<p>
-							A website I was commisioned to make by a psychotherapist for their newly
-							created practice.<br />
-							Designed to reflect the personality and style of the therapist to engage and
-							bring in new clients.
-						</p>
-						<a href="https://blackbirdcounselling.co.uk/">Website here</a>
-						<a href="https://github.com/KynanPR/blackbird">Code on GitHub</a>
-					</div>
-					<div class="project-examples__item">
-						<h2>Fool's Gambit Website</h2>
-						<p>A handbuilt website for one of my dance teams Fool's Gambit Morris</p>
-						<a href="https://foolsgambitmorris.co.uk/">See the website here</a>
-						<a href="https://github.com/KynanPR/Fools-Website">and the code on GitHub</a>
-					</div>
-					<div class="project-examples__item">
-						<h2>Portfolio Website</h2>
-						<p>
-							For the less observant I have a portfolio website...<br />Created initally as
-							part of my Career Foundry course, I use it to show off my work
-						</p>
-						<a href="https://github.com/KynanPR/My-Portfolio-Website"
-							>Check it out (again) on GitHub</a
-						>
-					</div>
-					<div class="project-examples__item">
-						<h2>Movie Api</h2>
-						<p>
-							A REST api built as part of my Career Foundry course.<br />Built using Node,
-							Express, Mongoose, MongoDB.<br />Note: Information obtained from the api should
-							not be relied on as factual 😁
-						</p>
-						<a href="https://github.com/KynanPR/movie_api">Check it out on GitHub</a>
-					</div>
-					<div class="project-examples__item">
-						<h2>Pokemon App</h2>
-						<p>A simple app that uses the PokeAPI to show information about Pokemon</p>
-						<a href="https://github.com/KynanPR/Pokemon-App">Check it out on GitHub</a>
-					</div>
-
-					<!-- <div class="project-examples__item">
-            <h2>Placeholder Project Title 6</h2>
-            <p>
-              Placeholder project description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ante non pulvinar accumsan. Nullam bibendum dui quis elementum auctor.
-            </p>
-            <a href="#">Check it out on GitHub</a>
-          </div> -->
-				</div>
-			</section>
-		</main>
-		<!-- Footer -->
-		<footer class="page-footer">
-			<p>Linky Links</p>
-			<div class="social-media">
-				<!-- Add links -->
-				<a href="https://github.com/KynanPR">
-					<img src="img/github_icon.svg" alt="Github" />
-				</a>
-				<a href="https://twitter.com/careerfoundry">
-					<img src="img/twitter_icon.svg" alt="Twitter" id="social-media__twitter-icon" />
-				</a>
-				<a href="https://www.linkedin.com/in/kynan-parker-roth-980b64165/">
-					<img src="img/linkedin_icon.svg" alt="LinkedIn" />
-				</a>
-			</div>
-		</footer>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kynan PR Portfolio</title>
+    <link rel="shortcut icon" href="img\favicon-32x32.png" />
+    <!-- Favicon source - https://www.flaticon.com/free-icons/portfolio -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700"
+      rel="stylesheet"
+    />
+    <!-- Production Stylesheet -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css" /> -->
+    <!-- Testing Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/modal.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="page-header">
+      <h1 class="name">KynanPR</h1>
+      <!-- Menu Bar -->
+      <nav class="page-header__item">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item"
+              >About Me</a
+            >
+          </li>
+          <li>
+            <a
+              href="work.html"
+              role="menuitem"
+              class="navigation-list__item navigation-list__item--active"
+              >My Work</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="contact.html" role="menuitem" class="navigation-list__item"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="links">
+        <a href="https://github.com/KynanPR">
+          <img src="img/GitHub_Logo_White.svg" alt="Github" />
+        </a>
+        <a href="https://www.linkedin.com/in/kynan-parker-roth-980b64165/">
+          <img src="img/linkedin_icon.svg" alt="LinkedIn" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="cards">
+        <div class="card" style="order: 3">
+          <div class="title">
+            <h2>Beat Invaders</h2>
+            <ul class="pill-list">
+              <li><img src="img/Unity_Logo.svg" />Unity</li>
+              <li><img src="img/CSharp_Logo.svg" />C#</li>
+            </ul>
+          </div>
+          <div class="video" style="padding: 100% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/1235797553?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&unmute_button=1&controls=0&loop=1#t=11"
+              frameborder="0"
+              allow="
+                autoplay;
+                fullscreen;
+                picture-in-picture;
+                clipboard-write;
+                encrypted-media;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              title="Beat Invaders Gameplay"
+            ></iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+          <div class="oneLiner">
+            A rhythm game twist on the classic Space Invaders
+          </div>
+          <div class="details"></div>
+        </div>
+        <div class="card" style="order: 2">
+          <div class="title">
+            <h2>PagePop</h2>
+            <ul class="pill-list">
+              <li><img src="img/React_Native_Logo.svg" />React Native</li>
+              <li><img src="img/TS_Logo.svg" />Typescript</li>
+              <li><img src="img/Supabase_Logo.svg" />Supabase</li>
+            </ul>
+          </div>
+          <div class="video" style="padding: 56.25% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/1235784027?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&unmute_button=1&controls=0&loop=1&texttrack=en#t=111"
+              frameborder="0"
+              allow="
+                autoplay;
+                fullscreen;
+                picture-in-picture;
+                clipboard-write;
+                encrypted-media;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              title="PagePop Showcase"
+            ></iframe>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+          <div class="details"></div>
+          <div class="oneLiner">
+            A mobile reading app designed to encorage childeren to read.
+          </div>
+        </div>
+        <div class="card" style="order: 1">
+          <div class="title">
+            <h2>Flappy Bird</h2>
+            <ul class="pill-list">
+              <li><img src="/img/CPP_Logo.svg" />C++</li>
+              <li><img src="/img/SFML_Logo.svg" />SFML</li>
+            </ul>
+          </div>
+          <div style="padding: 56.25% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/1243247891?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1&controls=0"
+              frameborder="0"
+              allow="
+                autoplay;
+                fullscreen;
+                picture-in-picture;
+                clipboard-write;
+                encrypted-media;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              title="Flappy Bird Gameplay"
+            ></iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+          <div class="oneLiner">
+            A clone of the hit mobile game Flappy Bird. Made in a duo using
+            SFML.
+          </div>
+          <div class="details"></div>
+        </div>
+        <div class="card" style="order: 0">
+          <div class="title">
+            <h2>Let's Go Ice Fishing</h2>
+            <ul class="pill-list">
+              <li><img src="/img/Godot_Logo.svg" />Godot</li>
+              <li><img src="/img/Godot_Logo.svg" />GDScript</li>
+            </ul>
+          </div>
+          <div class="video" style="padding: 75% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/1236129356?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&unmute_button=1&controls=0&loop=1&texttrack=en"
+              frameborder="0"
+              allow="
+                autoplay;
+                fullscreen;
+                picture-in-picture;
+                clipboard-write;
+                encrypted-media;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              title="Let's Go Ice Fishing Gameplay"
+            ></iframe>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+          <div class="oneLiner">
+            My final year project for Year 1 of my CS4G degree. Made in a
+            multidiciplinary team where I was the technical and programming
+            lead.
+          </div>
+          <div class="details">
+            <ul>
+              <li>
+                Made over 4 weeks using Agile methodologies. I took lead in most
+                of our scrums and standups.
+              </li>
+              <li>
+                I was the only dedicated programeer. One of the designers learnt
+                to program under my supervision and was a great asset.
+              </li>
+              <li>
+                I was solely responsible for the fishing part of the game as
+                well as some of the overworld. I also created the interfaces and
+                events to link all part of the game together.
+              </li>
+              <!-- <li>
+                Prior to this project none of the team had used Godot before. We
+                initially started on Unreal Engine, but quicly realised that it
+                wasn't the right engine for our pixel art 2D game. Whilst Unity
+                was an option and most of the team had some experience with it,
+                that experience was not positive. Godot was an exellent engine,
+                as well as easy to pick up. GDScript, with it's Python-like
+                syntax, was also simple and permisive enough to pick up and use
+                for a short project like this; I did insist that static typing
+                was used for any game code to aid development.
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
