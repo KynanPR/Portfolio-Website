@@ -12,13 +12,13 @@ $theme-light: (
   "error": #ef4444,
 );
 
-$__dark_surface_colour: #162b12;
+$__dark_surface_colour: #211a48;
 
 $theme-dark: (
   "primary": #7b02bb,
   "secondary": #7a127a,
   "accent": #890640,
-  "background": #31332f,
+  "background": #1a1a1f,
   "surface": $__dark_surface_colour,
   "text": #e4dcdc,
   "textMuted": #c6ced9,
@@ -182,8 +182,15 @@ main {
   border-radius: 100vw; //perfect pill shape at any size without any JS
   gap: 0.2rem;
 
-  font-size: x-small;
+  font-size: 0.8rem;
   font-weight: bold;
+  > img {
+    height: 100%;
+    // width: 32px;
+    max-height: 100%;
+
+    // max-width: 10%;
+  }
 }
 
 .card {
